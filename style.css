@@ -1,6 +1,6 @@
 /* =============================================
    MALAKAII — PORTFOLIO STYLESHEET
-   Charcoal-green base, amber accent, mint labels
+   Deep purple-dark bg, electric violet accent
    Using Syne (headings) + DM Sans (body)
 ============================================= */
 
@@ -10,16 +10,16 @@
 ─────────────────────────────────────────── */
 :root {
   /* Colors */
-  --color-bg:          #111714;   /* Main background — deep forest charcoal */
-  --color-bg-alt:      #0E1411;   /* Alternate section background */
-  --color-surface:     #181F1B;   /* Card / surface background */
-  --color-border:      #273029;   /* Subtle borders */
-  --color-accent:      #F0A500;   /* Warm amber — primary accent */
-  --color-accent-dim:  #332400;   /* Muted amber for fills */
-  --color-accent2:     #00D68F;   /* Mint green — section labels & secondary */
-  --color-text:        #EDF2EC;   /* Primary text — warm near-white */
-  --color-text-muted:  #7A9180;   /* Secondary text — sage grey */
-  --color-label:       #00D68F;   /* Section labels — mint */
+  --color-bg:          #0D0B12;   /* Main background — near-black with purple undertone */
+  --color-bg-alt:      #100E16;   /* Alternate section background */
+  --color-surface:     #161220;   /* Card / surface background */
+  --color-border:      #2A2040;   /* Subtle borders */
+  --color-accent:      #A855F7;   /* Electric violet — primary accent */
+  --color-accent-dim:  #2D1657;   /* Muted violet for fills */
+  --color-accent-hot:  #C084FC;   /* Bright violet for hovers */
+  --color-text:        #F0ECF8;   /* Primary text — warm off-white with purple tint */
+  --color-text-muted:  #8878A8;   /* Secondary text — muted violet-grey */
+  --color-label:       #E879F9;   /* Section labels — fuchsia pop */
 
   /* Typography */
   --font-display: 'Syne', sans-serif;
@@ -147,7 +147,7 @@ button:focus-visible {
 
 /* This class is added by JavaScript when the user scrolls down */
 .nav-header.scrolled {
-  background-color: rgba(17, 23, 20, 0.94);
+  background-color: rgba(13, 11, 18, 0.94);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -291,7 +291,7 @@ button:focus-visible {
 .cursor {
   color: var(--color-accent);
   animation: blink 1.1s step-end infinite;
-  text-shadow: 0 0 18px rgba(240, 165, 0, 0.7);
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.8), 0 0 40px rgba(168, 85, 247, 0.4);
 }
 
 @keyframes blink {
@@ -332,13 +332,12 @@ button:focus-visible {
   z-index: 1;
   background-image: radial-gradient(
     circle,
-    rgba(240, 165, 0, 0.09) 1px,
+    rgba(168, 85, 247, 0.12) 1px,
     transparent 1px
   );
   background-size: 36px 36px;
-  /* Fade out towards the left where the text is */
-  mask-image: linear-gradient(to left, rgba(0,0,0,0.7) 0%, transparent 65%);
-  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.7) 0%, transparent 65%);
+  mask-image: linear-gradient(to left, rgba(0,0,0,0.8) 0%, transparent 65%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.8) 0%, transparent 65%);
 }
 
 
@@ -376,8 +375,8 @@ button:focus-visible {
 }
 
 .btn-primary:hover {
-  background-color: #FFB830;
-  border-color: #FFB830;
+  background-color: var(--color-accent-hot);
+  border-color: var(--color-accent-hot);
   box-shadow: 0 8px 24px rgba(74, 158, 255, 0.25);
 }
 
@@ -459,8 +458,8 @@ button:focus-visible {
 }
 
 .skill-group:hover {
-  border-color: var(--color-accent2);
-  box-shadow: 0 0 0 1px rgba(0, 214, 143, 0.12);
+  border-color: var(--color-label);
+  box-shadow: 0 0 0 1px rgba(232, 121, 249, 0.15);
 }
 
 /* Group title (e.g. "Cloud (AWS)") */
@@ -495,8 +494,8 @@ button:focus-visible {
 }
 
 .skill-tag:hover {
-  border-color: var(--color-accent2);
-  color: var(--color-accent2);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 
@@ -523,7 +522,7 @@ button:focus-visible {
   border-color: var(--color-accent);
   border-left-color: var(--color-accent);
   transform: translateY(-4px);
-  box-shadow: 0 0 0 1px rgba(240, 165, 0, 0.15), 0 12px 32px rgba(0,0,0,0.35);
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.2), 0 12px 32px rgba(168, 85, 247, 0.12);
 }
 
 .project-card-inner {
@@ -607,16 +606,16 @@ button:focus-visible {
 }
 
 .contact-item:hover {
-  border-color: var(--color-accent2);
+  border-color: var(--color-accent);
   transform: translateX(4px);
-  box-shadow: 0 0 0 1px rgba(0, 214, 143, 0.1);
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.15);
 }
 
 .contact-icon {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
-  color: var(--color-accent2);
+  color: var(--color-accent);
 }
 
 .contact-item-text {
@@ -722,7 +721,7 @@ button:focus-visible {
     right: 0;
     flex-direction: column;
     gap: 0;
-    background-color: rgba(17, 23, 20, 0.99);
+    background-color: rgba(13, 11, 18, 0.99);
     border-bottom: 1px solid var(--color-border);
     padding: 16px 0;
   }
